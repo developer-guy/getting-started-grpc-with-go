@@ -23,3 +23,26 @@ $ go get google.golang.org/protobuf/cmd/protoc-gen-go \
 ```bash
 $ export PATH="$PATH:$(go env GOPATH)/bin"
 ```
+### Usage
+First, you need to split the screen with to parts
+
+In the first part of the screen you need to start server with the command:
+```bash
+$ go run server.go
+```
+and you'll see the following message:
+```bash
+gRPC server listening on port 9000
+```
+After that, you need to start a client to send a request to the gRPC server at the second part of the screen:
+```bash
+$ go run client.go
+```
+As soon as you type a command above, you will the see following messages in both screen:
+```bash
+# On the server side
+$ Receive message body from client: Hello From Client !
+
+# On the client side
+$  Response from server: Hello From the Server!       
+```
