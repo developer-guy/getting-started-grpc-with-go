@@ -46,3 +46,24 @@ $ Receive message body from client: Hello From Client !
 # On the client side
 $  Response from server: Hello From the Server!       
 ```
+### With 3rd party client called `grpcurl`
+
+On macOS, grpcurl is available via Homebrew:
+```bash
+$ brew install grpcurl
+```
+
+First, you should start the gRPC server like above:
+```bash
+$ go run server.go 
+```
+
+Then, you can get the service list exposed by the service with the command below:
+```bash
+$ grpcurl -plaintext localhost:9000
+```
+
+Invoking gRPC method expose by the service:
+```bash
+$ grpcurl -plaintext localhost:9000 chat.ChatsService/SayHello
+```
