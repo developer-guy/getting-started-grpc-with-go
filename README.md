@@ -1,6 +1,6 @@
 # Getting Started gRPC with Go
 
-![Go gRPC](./Screen Shot 2020-12-06 at 17.21.19.png)
+![Go gRPC](./go-grpc.png)
 > Credit https://tutorialedge.net/golang/go-grpc-beginners-tutorial/
 
 ### What is gRPC?
