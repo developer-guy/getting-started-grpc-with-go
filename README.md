@@ -60,10 +60,12 @@ $ go run server.go
 
 Then, you can get the service list exposed by the service with the command below:
 ```bash
-$ grpcurl -plaintext localhost:9000
+$ grpcurl -plaintext localhost:9000 list
+$ grpcurl -plaintext localhost:9000 list chat.ChatsService
+$ grpcurl -plaintext localhost:9000 describe chat.ChatsService.SayHello
 ```
 
 Invoking gRPC method expose by the service:
 ```bash
-$ grpcurl -plaintext localhost:9000 chat.ChatsService/SayHello
+$ grpcurl -d '{"body": "hello from iTerm2"}' -plaintext localhost:9000 chat.ChatsService/SayHello
 ```
